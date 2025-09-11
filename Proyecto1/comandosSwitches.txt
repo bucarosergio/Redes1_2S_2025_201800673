@@ -1,0 +1,34 @@
+-- Comandos para switch server
+- Cambio de nombre, colocar como serverVTP y configurar el dominioVTP y su contraseña
+enable
+configure terminal
+hostname swServer
+vtp mode server
+vtp domain C6_FIUComm
+vtp password proyecto12025
+
+- Agregar VLANs
+enable
+vlan database
+vlan 13 name RD
+
+- Modo trunk (sirve tambien para el cliente)
+enable
+configure terminal
+interface f0/1 o interface range 0/1-3
+switchport trunk encapsulation dot1q
+switchport mode trunk
+exit
+exit
+show vlan brief
+show interfaces trunk
+
+-- Comandos para switch cliente
+enable
+configure terminal
+hostname MSW5
+vtp mode client
+vtp domain C6_FIUComm
+vtp password proyecto12025
+exit
+show vtp status

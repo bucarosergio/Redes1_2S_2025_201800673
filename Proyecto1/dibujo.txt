@@ -1,0 +1,10 @@
+                msw1           msw2       
+        /    ///    \\\      ///    \\\      \
+  msw7 - msw5   ---     serv     ---   msw6 - msw8
+        \    \\\     ///     \\\    ///      /
+                msw3           msw4       
+
+msw7 va hacia msw1 y msw3
+msw8 va hacia msw2 y msw4
+
+cada diagonal significa cuantos cables van de un switch al otro
