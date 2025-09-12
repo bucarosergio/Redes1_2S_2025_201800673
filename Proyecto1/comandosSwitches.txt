@@ -32,3 +32,28 @@ vtp domain C6_FIUComm
 vtp password proyecto12025
 exit
 show vtp status
+show vlan brief
+
+enable
+configure terminal
+switchport mode access
+switchport access vlan 10
+
+- Modo transparent
+enable
+configure terminal
+hostname transparente
+vtp mode transparent
+exit
+
+
+enable
+configure terminal
+interface range f0/1-8
+switchport mode trunk
+exit
+vtp mode client
+vtp domain C6_FIUComm
+vtp password proyecto12025
+exit
+show vlan brief
